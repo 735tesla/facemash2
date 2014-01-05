@@ -31,6 +31,8 @@ Route::get('/create/groups', function()
             'user.ban' => 1,
             'content.upload' => 1,
             'content.delete' => 1,
+            'picture.upvote' => 1,
+            'picture.downvote' => 1,
         ),
     ));
 		$group = Sentry::createGroup(array(
@@ -40,6 +42,8 @@ Route::get('/create/groups', function()
             'user.ban' => 1,
             'content.upload' => 1,
             'content.delete' => 0,
+            'picture.upvote' => 1,
+            'picture.downvote' => 1,
         ),
     ));
 		$group = Sentry::createGroup(array(
@@ -49,6 +53,8 @@ Route::get('/create/groups', function()
             'user.ban' => 0,
             'content.upload' => 1,
             'content.delete' => 0,
+            'picture.upvote' => 1,
+            'picture.downvote' => 0,
         ),
     ));
 	}
